@@ -4,6 +4,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ContactosController;
+use App\Http\Controllers\SvelteapiController;
+use App\Http\Controllers\LlsController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -31,6 +33,11 @@ Route::post('logout', [AuthController::class, 'logout']);
 Route::post('refresh', [AuthController::class, 'refresh']);
 Route::post('me', [AuthController::class, 'me']);
 Route::post('icontact', [ContactosController::class, 'Contactosinsert']);
+Route::post('llsinsert', [LlsController::class, 'worker_insert']);
+Route::post('svelteapi', [SvelteapiController::class, 'Contactosinsert']);
+Route::get('sveltelistar', [SvelteapiController::class, 'listar']);
+Route::get('llslistar', [LlsController::class, 'listar']);
+
 Route::post('register', [AuthController::class, 'register']); 
 }
 );
