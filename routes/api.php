@@ -30,6 +30,7 @@ Route::post('login', [AuthController::class, 'login']);
 Route::post('logout', [AuthController::class, 'logout']);
 Route::post('refresh', [AuthController::class, 'refresh']);
 Route::post('me', [AuthController::class, 'me']);
+Route::get('sveltelistar', [ContactosController::class, 'listar']);
 Route::post('icontact', [ContactosController::class, 'Contactosinsert']);
 Route::post('register', [AuthController::class, 'register']); 
 }
