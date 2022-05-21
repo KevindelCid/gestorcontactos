@@ -36,6 +36,7 @@ Route::get('sveltelistar', [ContactosController::class, 'listar']);
 Route::post('icontact', [ContactosController::class, 'Contactosinsert']);
 Route::post('llsinsert', [LlsController::class, 'worker_insert']);
 Route::post('svelteapi', [SvelteapiController::class, 'Contactosinsert']);
+Route::post('llseditar/{id}', [LlsController::class, 'editar']);
 Route::get('sveltelistar', [SvelteapiController::class, 'listar']);
 Route::get('llslistar', [LlsController::class, 'listar']);
 

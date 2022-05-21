@@ -9,6 +9,7 @@ class Workers extends Model
 {
     use HasFactory;
 
+    protected $primaryKey = 'id_worker';
     protected $table = "personaslls";
     protected $fillable = [
         'correlativo',
