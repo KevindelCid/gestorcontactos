@@ -12,7 +12,7 @@ class LlsController extends Controller
 
 
 function listar(){
-    return Workers::all();
+    return Workers::select("*")->orderBy("created_at", "desc")->get();;
 }
 
 
